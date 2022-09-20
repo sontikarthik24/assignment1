@@ -4,6 +4,8 @@
  */
 package gui;
 
+import java.awt.Image;
+import javax.swing.Icon;
 import user.User;
 import javax.swing.ImageIcon;
 
@@ -392,8 +394,7 @@ public class ViewPanel extends javax.swing.JPanel {
         degreeTwoStart.setText(user.getDegree2StartDate());
         degreeTwoEnd.setText(user.getDegree2EndDate());
         email.setText(user.getEmailAddress());
-        picture.setIcon(new ImageIcon(user.getPhoto()));
-        
+        picture.setIcon(new ImageIcon(new ImageIcon(user.getPhoto()).getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT)));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
